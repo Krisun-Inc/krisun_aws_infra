@@ -7,10 +7,9 @@ provider "aws" {
     region = "${var.region}"
 
 }
-
+ 
 module "temp_bucket" {
     source = "./temp_bucket"
     bucket_name = "meet-test-terraform"
 }
-
 
