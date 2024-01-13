@@ -32,3 +32,7 @@ resource "local_file" "private_key_file" {
   filename = "my-ec2-key-pair.pem"
 }
 
+module "iot_core"{
+  source = "./iot_core"
+  region = var.region
+}

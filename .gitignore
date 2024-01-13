@@ -34,4 +34,4 @@ override.tf.json
 terraform.rc
 
 #ignore .pem files
-my-ec2-key-pair.pem
+certificates
