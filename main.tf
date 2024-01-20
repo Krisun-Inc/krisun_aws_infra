@@ -27,12 +27,12 @@ output "ec2_public_ip" {
   value = module.ec2_instance.public_ip
 }
 
-resource "local_file" "private_key_file" {
-  content  = module.ec2_instance.private_key_file_content
-  filename = "my-ec2-key-pair.pem"
-}
 
 module "iot_core"{
   source = "./iot_core"
   region = var.region
+}
+
+module "iot_databse"{
+  source = "./iot_database"
 }
